@@ -5,7 +5,7 @@ console.log(pandemicStartMap);
 let map1 = document.querySelector('#map1');
 
 function createDiv (col, id) {
-    return `<div id='blocks${id}' style="background-color: ${col}; width: 50px; height: 50px; margin-right: 3px"></div>`;
+    return `<div id='block${id}' style="background-color: ${col}; width: 50px; height: 50px; margin-right: 3px"></div>`;
 }
 
 id = '0';
@@ -27,29 +27,39 @@ function a (arr) {
 
 a(pandemicStartMap);
 
-function b (arr) {
-    let idxPandemic = [];
-    arr.forEach((n, index) =>{
-       if (n === '1') {
-        idxPandemic.push( index);
-       }
-    })
-    console.log(idxPandemic);
+// function b (arr) {
+//     let idxPandemic = [];
+//     arr.forEach((n, index) =>{
+//        if (n === '1') {
+//         idxPandemic.push( index);
+//        }
+//     })
+//     console.log(idxPandemic);
+// }
+
+// b(pandemicStartMap);
+
+function c (arr) {
+    let infected = [];
+    arr.map((item, index) => {
+        if (item === 'X') {
+            infected.push(index);
+        }
+    });
+    console.log(infected);
 }
 
-b(pandemicStartMap);
-
-
+c(pandemicStartMap);
 
 // let blocks = document.querySelector('#blocks3');
 
-function c (arr, arrPandemic) {
-    arrPandemic.map((item) => {
-        for (i = item; i < arr.length || arr[i] == 'X'; i++) {
+// function c (arr, arrPandemic) {
+//     arrPandemic.map((item) => {
+//         for (i = item; i < arr.length || arr[i] == 'X'; i++) {
 
-        }
-    });
-}
+//         }
+//     });
+// }
 
 // b(pandemicStartMap);
 
